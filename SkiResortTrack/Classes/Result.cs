@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkiResortTrack.Classes
 {
-    class Result
+    public class Result
     {
         public int lenght { get; set; }
         public int slope { get; set; }
