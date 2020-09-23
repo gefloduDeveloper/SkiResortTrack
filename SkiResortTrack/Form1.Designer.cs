@@ -56,6 +56,7 @@
             this.btnMapFileSelector.TabIndex = 1;
             this.btnMapFileSelector.Text = "...";
             this.btnMapFileSelector.UseVisualStyleBackColor = true;
+            this.btnMapFileSelector.Click += new System.EventHandler(this.btnMapFileSelector_Click);
             // 
             // label1
             // 
@@ -73,7 +74,6 @@
             this.lblTaskDescription.Name = "lblTaskDescription";
             this.lblTaskDescription.Size = new System.Drawing.Size(0, 13);
             this.lblTaskDescription.TabIndex = 3;
-            this.lblTaskDescription.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -116,6 +116,7 @@
             this.btnStart.TabIndex = 8;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // Form1
             // 
