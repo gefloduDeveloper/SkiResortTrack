@@ -13,6 +13,10 @@ namespace SkiResortTrack.Classes
         public int width;
         public int height;
         
+        /// <summary>
+        /// Builds a Map object based on the information given in the file
+        /// </summary>
+        /// <param name="mapFilePath">path of the file with the size and heights info</param>
         public Map(string mapFilePath)
         {
             string[] tempValues;
@@ -39,6 +43,11 @@ namespace SkiResortTrack.Classes
             }
         }
 
+        /// <summary>
+        /// Finds the best route for skiing in the map given the heights info, based on the longest and steepest track
+        /// </summary>
+        /// <param name="map">height and size info</param>
+        /// <param name="result">referenced result to return</param>
         public void getBestRoute(Map map, ref Result result)
         {
             for (int i = 0; i < map.height; i++)
@@ -55,6 +64,14 @@ namespace SkiResortTrack.Classes
             }
         }
 
+        /// <summary>
+        /// returns the best route on the map starting on the given position
+        /// </summary>
+        /// <param name="map">heights an size info</param>
+        /// <param name="row">starting row</param>
+        /// <param name="column">starting column</param>
+        /// <param name="result">acumulative result</param>
+        /// <returns>result of the best track on the given coordinates added to the given result</returns>
         private Result getlongestRoute(Map map, int row, int column, Result result)
         {
             Result bestResult = new Result();

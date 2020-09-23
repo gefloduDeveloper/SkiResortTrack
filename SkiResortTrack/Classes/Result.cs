@@ -19,6 +19,11 @@ namespace SkiResortTrack.Classes
             route = String.Empty;
         }
 
+        /// <summary>
+        /// Compares the currente result with the given one
+        /// </summary>
+        /// <param name="temp">result to caompare with</param>
+        /// <returns>returns if the temp result is better than the current one, first comparing the lenght, in case of a tie compares the steep</returns>
         public bool isBetter(Result temp)
         {
             bool isBetter = false;
@@ -39,6 +44,10 @@ namespace SkiResortTrack.Classes
             return isBetter;
         }
 
+        /// <summary>
+        /// returns the calculated slope based on the assigned route
+        /// </summary>
+        /// <returns>calculated slope</returns>
         public int getSlope()
         {
             int slope = 0;
@@ -50,6 +59,10 @@ namespace SkiResortTrack.Classes
             return slope;
         }
 
+        /// <summary>
+        /// resturns the object info in a string
+        /// </summary>
+        /// <returns>result info in a string var</returns>
         public override string ToString()
         {
             return ("lenght: " + lenght + ", \nslope: " + slope + ", \nroute: " + route);
